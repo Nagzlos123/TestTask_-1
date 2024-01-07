@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private PlayerDataSet playerData;
     [SerializeField] private GameObject thisGameObject;
-    bool isSetToLead = false;
+     public bool isSetToLead = false;
    
 
     // Start is called before the first frame update
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
 
     public void ResetPlayer()
     {
-        //GameObject thisGameObject = this.GetComponent<GameObject>();
+        
         thisGameObject.GetComponent<Renderer>().material.color = noLeadColor;
         isSetToLead = false;
 
@@ -40,9 +40,8 @@ public class Player : MonoBehaviour
     public void SetLeadPlayer()
     {
 
-        //GameObject thisGameObject = this.GetComponent<GameObject>();
+        
         thisGameObject.GetComponent<Renderer>().material.color = leadColor;
-        //GameObject.Find("Cube").GetComponent<Renderer>().material.color = new Color(0, 204, 102);
         isSetToLead = true;
     }
 

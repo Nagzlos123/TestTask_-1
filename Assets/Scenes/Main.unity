@@ -471,7 +471,7 @@ GameObject:
   - component: {fileID: 201821290}
   - component: {fileID: 201821289}
   - component: {fileID: 201821288}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -528,6 +528,7 @@ MonoBehaviour:
   noLeadColor: {r: 0, g: 0.42855215, b: 1, a: 0}
   playerData: {fileID: 0}
   thisGameObject: {fileID: 201821286}
+  isSetToLead: 0
 --- !u!195 &201821290
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -867,7 +868,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_GenerateLinks: 0
@@ -878,7 +879,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 086e58a51f8c42e4d8bdc299469eaa70, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &380832888
 Transform:
@@ -1238,6 +1239,7 @@ MonoBehaviour:
   - {fileID: 201821286}
   - {fileID: 1450154082}
   - {fileID: 1191862642}
+  leadPlayer: {fileID: 0}
 --- !u!1 &541594000
 GameObject:
   m_ObjectHideFlags: 0
@@ -2485,7 +2487,7 @@ GameObject:
   - component: {fileID: 1191862646}
   - component: {fileID: 1191862645}
   - component: {fileID: 1191862644}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2542,6 +2544,7 @@ MonoBehaviour:
   noLeadColor: {r: 0, g: 0.42855215, b: 1, a: 0}
   playerData: {fileID: 0}
   thisGameObject: {fileID: 1191862642}
+  isSetToLead: 0
 --- !u!195 &1191862646
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2652,7 +2655,7 @@ GameObject:
   - component: {fileID: 1450154086}
   - component: {fileID: 1450154085}
   - component: {fileID: 1450154084}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2709,6 +2712,7 @@ MonoBehaviour:
   noLeadColor: {r: 0, g: 0.42855215, b: 1, a: 0}
   playerData: {fileID: 0}
   thisGameObject: {fileID: 1450154082}
+  isSetToLead: 0
 --- !u!195 &1450154086
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3125,7 +3129,7 @@ GameObject:
   - component: {fileID: 1687696754}
   - component: {fileID: 1687696756}
   - component: {fileID: 1687696755}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3277,6 +3281,7 @@ MonoBehaviour:
   noLeadColor: {r: 0, g: 0.42855215, b: 1, a: 0}
   playerData: {fileID: 0}
   thisGameObject: {fileID: 1687696749}
+  isSetToLead: 0
 --- !u!1 &1715094132
 GameObject:
   m_ObjectHideFlags: 0
@@ -3394,7 +3399,7 @@ GameObject:
   - component: {fileID: 1730110053}
   - component: {fileID: 1730110052}
   - component: {fileID: 1730110051}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
