@@ -7,18 +7,45 @@ public class PlayerMovement : MonoBehaviour
 {
 
     [SerializeField] private Camera cam;
-    [SerializeField] private NavMeshAgent agent;
+     private NavMeshAgent agent;
     [HideInInspector]
     public Transform destination = null;
+
+    
+    private float stopDestination = 3f;
     [SerializeField] private Player player;
 
+    private void Start()
+    {
+        agent = GetComponent<NavMeshAgent>();
+    }
 
 
     // Update is called once per frame
     void Update()
     {
-        MoveTo();
-        SetTarget();
+        if (destination != null && player.isSetToLead == false)
+        {
+            float distance = Vector3.Distance(transform.position, destination.position);
+
+            if(distance < stopDestination)
+            {
+                StopAgent();
+            }
+            else
+            {
+                SetTarget();
+            }
+
+        }
+        else 
+        {
+            MoveTo();
+            
+        }
+           
+       
+        
     }
 
     public void MoveTo()
@@ -34,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
 
                 if (player.isSetToLead == true) //seting destination point for lead player
                 {
+                    agent.isStopped = false;
                     agent.SetDestination(raycastHit.point);
                     destination = null;
                 }
@@ -46,10 +74,20 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void StopAgent()
+    {
+        agent.isStopped = true;
+        //Debug.Log("Agent was stopped!");
+    }
+
     public void SetTarget()
     {
         //seting destination point for no lead players
-        if(destination != null)
-        agent.SetDestination(destination.position);
+
+        
+       agent.isStopped = false;
+       agent.SetDestination(destination.position);
+       
+        
     }
 }

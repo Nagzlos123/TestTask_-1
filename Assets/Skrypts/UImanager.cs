@@ -34,12 +34,34 @@ public class UImanager : MonoBehaviour
         Debug.Log("Game is over");
     }
 
+    public void ResetScene()
+    {
+        SceneManager.LoadScene(0);
+    }
 
     private void SetMovingDestination()
     {
         foreach (var player in players)
         {
             if (player.GetComponent<Player>().isSetToLead == false)
+            {
+                player.GetComponent<PlayerMovement>().destination = leadPlayer.transform;
+            }
+            else
+            {
+                player.GetComponent<PlayerMovement>().destination = null;
+            }
+        }
+
+    }
+
+    private void StopPlayers()
+    {
+
+
+        foreach (var player in players)
+        {
+            if (player.GetComponent<Player>().isSetToLead == false )
             {
                 player.GetComponent<PlayerMovement>().destination = leadPlayer.transform;
             }
