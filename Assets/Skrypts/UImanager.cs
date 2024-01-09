@@ -8,12 +8,13 @@ public class UImanager : MonoBehaviour
 {
     public List<GameObject> players;
     public GameObject leadPlayer;
-    
-
+    public PlayerDataSet[] playerDataSets;
+    public int dataSetLength;
     // Start is called before the first frame update
     void Start()
     {
-        
+        dataSetLength = playerDataSets.Length - 1;
+        AddRandomDataSetsToPlayers();
     }
 
     public void ButtonCliked( GameObject playerCharakter)
@@ -39,6 +40,11 @@ public class UImanager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void LeadPlayerPanelInfo()
+    {
+        //leadPlayer.GetComponent<Player>().playerData;
+    }
+
     private void SetMovingDestination()
     {
         foreach (var player in players)
@@ -55,23 +61,18 @@ public class UImanager : MonoBehaviour
 
     }
 
-    private void StopPlayers()
+    private void AddRandomDataSetsToPlayers()
     {
-
-
         foreach (var player in players)
         {
-            if (player.GetComponent<Player>().isSetToLead == false )
-            {
-                player.GetComponent<PlayerMovement>().destination = leadPlayer.transform;
-            }
-            else
-            {
-                player.GetComponent<PlayerMovement>().destination = null;
-            }
+            var randomDataSet = Random.Range(0, dataSetLength);
+
+            player.GetComponent<Player>().playerData = playerDataSets[randomDataSet];
         }
 
     }
+
+
 
 
 

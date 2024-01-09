@@ -13,11 +13,12 @@ public class PlayerMovement : MonoBehaviour
 
     
     private float stopDestination = 3f;
-    [SerializeField] private Player player;
+    private Player player;
 
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        player = GetComponent<Player>();
     }
 
 
@@ -83,11 +84,12 @@ public class PlayerMovement : MonoBehaviour
     public void SetTarget()
     {
         //seting destination point for no lead players
-
-        
        agent.isStopped = false;
-       agent.SetDestination(destination.position);
-       
-        
+       agent.SetDestination(destination.position); 
+    }
+
+    public void SetAgentSpeed()
+    {
+        agent.speed = player.speed;
     }
 }

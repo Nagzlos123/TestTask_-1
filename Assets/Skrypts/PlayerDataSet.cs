@@ -8,7 +8,7 @@ public class PlayerDataSet : ScriptableObject
 
    
     public float speed;
-    public float maneueverability;
+    public float maneuverability;
     public float endurence;
 
 }

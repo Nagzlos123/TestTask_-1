@@ -6,13 +6,13 @@ public class Player : MonoBehaviour
 {
 
     public float speed;
-    public float maneueverability;
+    public float maneuverability;
     public float endurence;
 
     public Color leadColor;
     public Color noLeadColor;
 
-    [SerializeField] private PlayerDataSet playerData;
+    public PlayerDataSet playerData;
     [SerializeField] private GameObject thisGameObject;
      public bool isSetToLead = false;
    
@@ -20,13 +20,13 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        GetDataSet();
     }
 
     public void ResetPlayer()
@@ -47,6 +47,12 @@ public class Player : MonoBehaviour
 
     public void GetDataSet()
     {
-
+        if (playerData != null)
+        {
+            PlayerDataSet currentDataSet = playerData;
+            speed = currentDataSet.speed;
+            thisGameObject.GetComponent<PlayerMovement>().SetAgentSpeed();
+       
+        }
     }
 }
