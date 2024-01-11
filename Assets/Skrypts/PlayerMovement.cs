@@ -14,11 +14,18 @@ public class PlayerMovement : MonoBehaviour
     
     private float stopDestination = 3f;
     private Player player;
+    public float timeBtwStop;
+    public float timeStop = 3f;
+
 
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         player = GetComponent<Player>();
+       
+    
+        
+
     }
 
 
@@ -44,9 +51,18 @@ public class PlayerMovement : MonoBehaviour
             MoveTo();
             
         }
-           
-       
-        
+
+        if(UImanager.isButtonClicked == true)
+        {
+            //EndurenceTimer();
+            
+
+
+        }
+
+      
+
+
     }
 
     public void MoveTo()
@@ -75,6 +91,31 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void EndurenceTimer()
+    {
+        float currentEndurence = player.playerData.endurence;
+        timeBtwStop = currentEndurence;
+        if (timeBtwStop <= 0)
+        {
+
+         StopAgent();
+         //timeBtwStop = currentEndurence;
+            //timeBtwStop = 0;
+            //timeStop--;
+
+
+
+        }
+        else
+        {
+            agent.isStopped = false;
+            timeBtwStop -= Time.deltaTime;
+            //timeBtwStop--;
+        }
+    }
+
+
+
     private void StopAgent()
     {
         agent.isStopped = true;
@@ -91,5 +132,10 @@ public class PlayerMovement : MonoBehaviour
     public void SetAgentSpeed()
     {
         agent.speed = player.speed;
+    }
+
+    public void SetAgentAngularSpeed()
+    {
+        agent.angularSpeed = player.maneuverability;
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class UImanager : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class UImanager : MonoBehaviour
     public GameObject leadPlayer;
     public PlayerDataSet[] playerDataSets;
     public int dataSetLength;
+    public static bool isButtonClicked = false;
+
+    [SerializeField] private TextMeshProUGUI speedDisplay;
+    [SerializeField] private TextMeshProUGUI maneuverabilityDisplay;
+    [SerializeField] private TextMeshProUGUI endurenceDisplay;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +34,7 @@ public class UImanager : MonoBehaviour
         var currentPlayer = playerCharakter.GetComponent<Player>();
         currentPlayer.SetLeadPlayer();
         leadPlayer = playerCharakter;
+        isButtonClicked = true;
     }
    public void QuitGame()
     {
@@ -42,7 +49,10 @@ public class UImanager : MonoBehaviour
 
     public void LeadPlayerPanelInfo()
     {
-        //leadPlayer.GetComponent<Player>().playerData;
+        PlayerDataSet currentDataSet = leadPlayer.GetComponent<Player>().playerData;
+        speedDisplay.text = currentDataSet.speed.ToString();
+        maneuverabilityDisplay.text = currentDataSet.maneuverability.ToString();
+        endurenceDisplay.text = currentDataSet.endurence.ToString();
     }
 
     private void SetMovingDestination()
@@ -75,7 +85,6 @@ public class UImanager : MonoBehaviour
 
 
 
-
     // Update is called once per frame
     void Update()
     {
@@ -83,6 +92,8 @@ public class UImanager : MonoBehaviour
         {
             SetMovingDestination();
         }
+
+
        
     }
 }

@@ -374,6 +374,14 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 617980624}
+    - target: {fileID: 879413565914239901, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
+      propertyPath: counterTask1
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 879413565914239901, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
+      propertyPath: counterTask2
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1075520469772023000, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
       propertyPath: m_LocalPosition.x
       value: 114.38299
@@ -413,6 +421,10 @@ PrefabInstance:
     - target: {fileID: 1075520469772023000, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3112107028936225491, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
+      propertyPath: counterTask2
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4139427568603230605, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
       propertyPath: m_Name
@@ -807,6 +819,14 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 617980624}
+    - target: {fileID: 879413565914239901, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
+      propertyPath: counterTask1
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 879413565914239901, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
+      propertyPath: counterTask2
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1075520469772023000, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
       propertyPath: m_LocalPosition.x
       value: 117.19399
@@ -846,6 +866,10 @@ PrefabInstance:
     - target: {fileID: 1075520469772023000, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3112107028936225491, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
+      propertyPath: counterTask2
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4139427568603230605, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
       propertyPath: m_Name
@@ -1494,6 +1518,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2c62020b34b1f694ebd75cfc3905c0ad, type: 2}
   - {fileID: 11400000, guid: 1591704f6ea29654f84b8744360cefdb, type: 2}
   dataSetLength: 0
+  speedDisplay: {fileID: 119374345}
+  maneuverabilityDisplay: {fileID: 1543251342}
+  endurenceDisplay: {fileID: 206146016}
 --- !u!1 &541594000
 GameObject:
   m_ObjectHideFlags: 0
@@ -2524,6 +2551,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 510286004}
+        m_TargetAssemblyTypeName: UImanager, Assembly-CSharp
+        m_MethodName: LeadPlayerPanelInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 510286004}
+        m_TargetAssemblyTypeName: UImanager, Assembly-CSharp
+        m_MethodName: StartEndurenceTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &870370972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2826,6 +2877,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 510286004}
+        m_TargetAssemblyTypeName: UImanager, Assembly-CSharp
+        m_MethodName: LeadPlayerPanelInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 510286004}
+        m_TargetAssemblyTypeName: UImanager, Assembly-CSharp
+        m_MethodName: StartEndurenceTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1037307451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3092,6 +3167,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 510286004}
+        m_TargetAssemblyTypeName: UImanager, Assembly-CSharp
+        m_MethodName: LeadPlayerPanelInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 510286004}
+        m_TargetAssemblyTypeName: UImanager, Assembly-CSharp
+        m_MethodName: StartEndurenceTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1152350524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3166,11 +3265,11 @@ RectTransform:
   - {fileID: 1521613850}
   m_Father: {fileID: 510286002}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 558.52014, y: 958.99994}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 558.5201, y: 890.82983}
   m_SizeDelta: {x: 526.313, y: 252.34}
-  m_Pivot: {x: 1, y: 1}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1263469298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3221,6 +3320,14 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 617980624}
+    - target: {fileID: 879413565914239901, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
+      propertyPath: counterTask1
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 879413565914239901, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
+      propertyPath: counterTask2
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1075520469772023000, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
       propertyPath: m_LocalPosition.x
       value: 120.74474
@@ -3260,6 +3367,10 @@ PrefabInstance:
     - target: {fileID: 1075520469772023000, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3112107028936225491, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
+      propertyPath: counterTask2
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4139427568603230605, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
       propertyPath: m_Name
@@ -3812,6 +3923,30 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 60434522}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 510286004}
+        m_TargetAssemblyTypeName: UImanager, Assembly-CSharp
+        m_MethodName: LeadPlayerPanelInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 510286004}
+        m_TargetAssemblyTypeName: UImanager, Assembly-CSharp
+        m_MethodName: StartEndurenceTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4420,6 +4555,18 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 617980624}
+    - target: {fileID: 879413565914239901, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
+      propertyPath: timeStop
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 879413565914239901, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
+      propertyPath: counterTask1
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 879413565914239901, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
+      propertyPath: counterTask2
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1075520469772023000, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
       propertyPath: m_LocalPosition.x
       value: 117.4
@@ -4459,6 +4606,10 @@ PrefabInstance:
     - target: {fileID: 1075520469772023000, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3112107028936225491, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
+      propertyPath: counterTask2
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4139427568603230605, guid: 66c9bec59498d4047a4ff68d3db5a277, type: 3}
       propertyPath: m_Name

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   maneuverability: 360
-  endurence: 8
+  endurence: 80
