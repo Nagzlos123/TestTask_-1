@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Player : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject thisGameObject;
      public bool isSetToLead = false;
     private PlayerMovement movement;
+    private NavMeshAgent agent;
 
     [SerializeField] private float counterTask1 = 30f;
     [SerializeField] private float counterTask2 = 20f;
@@ -26,6 +28,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         movement = GetComponent<PlayerMovement>();
+        agent = GetComponent<NavMeshAgent>();
         timer = 0;
         chooseTask = false;
     }
@@ -55,7 +58,6 @@ public class Player : MonoBehaviour
     public void SetLeadPlayer()
     {
 
-        
         thisGameObject.GetComponent<Renderer>().material.color = leadColor;
         isSetToLead = true;
     }
@@ -75,6 +77,7 @@ public class Player : MonoBehaviour
 
         }
     }
+
     public void EndurenceTimer()
     {
         counterTask1 = playerData.endurence;
@@ -85,6 +88,7 @@ public class Player : MonoBehaviour
             timer -= counterTask1;
             chooseTask = true;
             movement.enabled = false;
+            agent.isStopped = false;
 
                  
         }
@@ -93,6 +97,7 @@ public class Player : MonoBehaviour
             timer -= counterTask2;
             chooseTask = false;
             movement.enabled = true;
+            agent.isStopped = true;
         }
     }
 }

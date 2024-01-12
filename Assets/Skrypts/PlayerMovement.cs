@@ -14,8 +14,7 @@ public class PlayerMovement : MonoBehaviour
     
     private float stopDestination = 3f;
     private Player player;
-    public float timeBtwStop;
-    public float timeStop = 3f;
+
 
 
     private void Start()
@@ -52,13 +51,7 @@ public class PlayerMovement : MonoBehaviour
             
         }
 
-        if(UImanager.isButtonClicked == true)
-        {
-            //EndurenceTimer();
-            
-
-
-        }
+     
 
       
 
@@ -91,28 +84,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void EndurenceTimer()
-    {
-        float currentEndurence = player.playerData.endurence;
-        timeBtwStop = currentEndurence;
-        if (timeBtwStop <= 0)
-        {
-
-         StopAgent();
-         //timeBtwStop = currentEndurence;
-            //timeBtwStop = 0;
-            //timeStop--;
-
-
-
-        }
-        else
-        {
-            agent.isStopped = false;
-            timeBtwStop -= Time.deltaTime;
-            //timeBtwStop--;
-        }
-    }
+ 
 
 
 

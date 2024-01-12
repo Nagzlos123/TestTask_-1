@@ -8,6 +8,7 @@ using TMPro;
 public class UImanager : MonoBehaviour
 {
     public List<GameObject> players;
+    [HideInInspector]
     public GameObject leadPlayer;
     public PlayerDataSet[] playerDataSets;
     public int dataSetLength;
